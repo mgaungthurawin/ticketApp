@@ -39,7 +39,8 @@
                         {!! Form::label('no', 'Tour:') !!}
                         <p>
                         <?php
-                            $locations = App\Models\Location::wherein('id', $bus->location)->select('name')->get()->toArray();
+                            $location = explode(",", $bus->location);
+                            $locations = App\Models\Location::wherein('id', $location)->select('name')->get()->toArray();
                             foreach ($locations as $key => $location) {
                                 $arr[] = $location['name'];
                             }

@@ -79,7 +79,8 @@ class BusController extends Controller
             Flash::error('Bus not found');
             return redirect(route('bus.index'));
         }
-        $selected = Location::wherein('id', $bus->location)->get();
+        $location = explode(",", $bus->location);
+        $selected = Location::wherein('id', $location)->get();
 
         return view('admin.bus.edit', compact('bus', 'locations', 'selected'));
     }

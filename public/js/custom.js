@@ -21,7 +21,7 @@ jQuery(document).ready(function () {
 	    		$('#remove_location').show();
 	    	}
 	    	i +=1;
-	    	$('#loc').append('<select id="location'+i+'" name="location[]" class="form-control">')
+	    	$('#loc').append('<div id="loc_main'+i+'"><select id="location'+i+'" name="location[]" class="form-control"></div>')
 	    	$("#location"+i).html("");
 	    	$(locations).each(function (l) {
 	    		var $option = $("<option value="+locations[l].id+">"+locations[l].name+"</option>");
@@ -53,7 +53,7 @@ jQuery(document).ready(function () {
     		$('#remove_location').show();
     	}
 
-    	$('#loc').append('<select id="location'+i+'" name="location[]" class="form-control">')
+    	$('#loc').append('<div id="loc_main'+i+'"><select id="location'+i+'" name="location[]" class="form-control"></div>')
     	$("#location"+i).html(""); 
 	    $(locations).each(function (r) { 
 	        $("#location"+i).append("<option value="+locations[r].id+">"+locations[r].name+"</option>");
@@ -64,7 +64,7 @@ jQuery(document).ready(function () {
     });
 
     $(document).on('click', '#remove_location', function () {
-    	$('#location'+i).remove();
+    	$('#loc_main'+i).remove();
     	i -= 1;
     	
     	if (i === 0) {
