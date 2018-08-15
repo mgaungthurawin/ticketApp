@@ -9,22 +9,22 @@
         @endif
 </div>
 
-<div class="form-group col-sm-3">
-    {!! Form::label('price', 'Price:') !!} <span class="text-danger">*</span>
-        {!! Form::number('price', null, ['class' => 'form-control']) !!}
-    @if ($errors->has('price'))
-        <span class="text-danger">
-            <strong>{{ $errors->first('price') }}</strong>
-        </span>
-    @endif
-</div>
-
 <div class="form-group col-sm-6">
     {!! Form::label('allow', 'Allow Seat:') !!} <span class="text-danger">*</span>
         {!! Form::text('allow', null, ['class' => 'form-control']) !!}
     @if ($errors->has('allow'))
         <span class="text-danger">
             <strong>{{ $errors->first('allow') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group col-sm-3">
+    {!! Form::label('price', 'Price:') !!} <span class="text-danger">*</span>
+        {!! Form::number('price', null, ['class' => 'form-control']) !!}
+    @if ($errors->has('price'))
+        <span class="text-danger">
+            <strong>{{ $errors->first('price') }}</strong>
         </span>
     @endif
 </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cake Order</title>
+    <title>Ticket</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -41,7 +41,7 @@
     <div class="login-box-body">
         <!-- <p class="login-box-msg">Sign in to start your session</p> -->
         <div class="login-logo">
-            <b>Cake </b><i>Order</i>
+            <b>Bus </b><i>Ticket</i>
         </div>
 
         <form id="loginform" name="loginform" method="post" action="">

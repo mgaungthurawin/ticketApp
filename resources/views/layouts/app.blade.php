@@ -76,8 +76,12 @@
         $("#onewayto").select2();
 
     });
-@yield('scripts')
+
+
 </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    @include('sweet::alert')
+@yield('scripts')
 <!-- //load-more -->
 
 

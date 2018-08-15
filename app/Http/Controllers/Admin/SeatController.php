@@ -60,7 +60,7 @@ class SeatController extends Controller
         //         'status' => $status
         //     ];
         // }
-
+        
         Seat::create($request->all());
         Flash::success('Successfully save the seat.');
         return redirect(route('seat.index'));

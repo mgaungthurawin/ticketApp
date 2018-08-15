@@ -15,8 +15,16 @@ class BusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->get('name')) {
+            $buses = Bus::WHERE('no', $request->get('name'))->paginate(15);
+            if (empty($buses)) {
+                Flash::error('bus not found');
+                return redirect(route('bus.index'));
+            }
+            return view('admin.bus.index', compact('buses'));
+        }
         $buses = Bus::orderby('id', 'DESC')->paginate(15);
         return view('admin.bus.index', compact('buses'));
     }

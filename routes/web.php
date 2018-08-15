@@ -14,8 +14,9 @@
 Route::get('/', 'Frontend\TicketController@index');
 Route::post('/searchbus', 'Frontend\TicketController@searchbus');
 Route::get('/viewseat/{bus_id}', 'Frontend\TicketController@viewseat');
-
-
+Route::post('/bookinginfo', 'Frontend\BookingController@index');
+Route::get('/customerinfo', 'Frontend\BookingController@create');
+Route::post('/customerinfo', 'Frontend\BookingController@store');
 
 
 Route::group(['prefix'=>'admin'],function(){
@@ -25,4 +26,5 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::resource('bus', 'Admin\BusController');
 	Route::resource('schedule', 'Admin\ScheduleController');
 	Route::resource('seat', 'Admin\SeatController');
+	Route::resource('booking', 'Admin\BookingController');
 });

@@ -16,15 +16,15 @@ class LocationController extends Controller
      */
     public function index(Request $request)
     {
-        // if ($request->get('name')) {
-        //     $locations = Location::WHERE('name', $request->name)->first();
-        //     if (empty($locations)) {
-        //         Flash::error('location not found');
-        //         return redirect(route('location.index'));
-        //     }
+        if ($request->get('name')) {
+            $locations = Location::WHERE('name', $request->get('name'))->paginate(15);
+            if (empty($locations)) {
+                Flash::error('location not found');
+                return redirect(route('location.index'));
+            }
 
-        //     return view('admin.location.index', compact('locations'));
-        // }
+            return view('admin.location.index', compact('locations'));
+        }
 
         $locations = Location::orderby('id', 'DESC')->paginate(15);
         return view('admin.location.index', compact('locations'));

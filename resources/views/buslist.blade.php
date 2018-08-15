@@ -7,7 +7,11 @@
         <div class="sap_tabs">          
             <div id="horizontalTab">
                 <ul class="resp-tabs-list">
-                    <li class="resp-tab-item"><span>Yangon, Mandalay</span></li>         
+                    <li class="resp-tab-item"><span>
+                        <?php
+                            echo implode(" - ", $loc);
+                        ?>
+                    </span></li>         
                 </ul>   
                 <div class="clearfix"> </div>   
                 <div class="resp-tabs-container">
@@ -30,7 +34,7 @@
                                     <h3>{{ $bus->depature_date}} {{ $bus->depature_time}} ({{$bus->period}}) </h3>
                                 </div>
                                 <div class="to">
-                                    <h3>15000 Ks / 1 seats</h3>
+                                    <h3>{{ $bus->price }} Ks / 1 seats</h3>
                                 </div>
 
                                 <div class="from">

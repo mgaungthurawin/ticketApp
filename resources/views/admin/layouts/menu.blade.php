@@ -13,3 +13,7 @@
 <li class="{{ Request::is('seat*') ? 'active' : '' }}">
     <a href="{!! route('seat.index') !!}"><i class="fa fa-edit"></i><span>Seat</span></a>
 </li>
+
+<li class="{{ Request::is('booking*') ? 'active' : '' }}">
+    <a href="{!! route('booking.index') !!}"><i class="fa fa-edit"></i><span>Booking</span></a>
+</li>

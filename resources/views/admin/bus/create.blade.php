@@ -26,7 +26,6 @@
 
                     <input type="hidden" id="location_collection" name="location_collection" value="{{$locations}}">
 
-
                     <div class="form-group col-sm-12">
                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
                        <a href="{!! route('bus.index') !!}" class="btn btn-default">Cancel</a>

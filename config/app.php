@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Caffeinated\Flash\FlashServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
     ],
 
@@ -213,6 +214,7 @@ return [
         'Flash' => Caffeinated\Flash\Facades\Flash::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 

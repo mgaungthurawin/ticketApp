@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BBC VIO</title>
+    <title>Ticket</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -38,7 +38,7 @@
 </head>
 <body class="hold-transition register-page">
     <div class="register-logo">
-        <b>Admin </b><i>Panal</i>
+        <b>Bus </b><i>Ticket</i>
     </div>
 <div class="register-box">
 

@@ -6,14 +6,12 @@
            <a class="btn btn-primary pull-right" href="{!! route('bus.create') !!}">Add New</a>
         </h1>
         <div class="row">
-            <div class="pull-left">
-                <form method="GET">
-                    <div class="form-group col-md-8">
-                        <input type="text" name="name" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </div>
+            <form method="GET">
+                <div class="form-group col-md-4">
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
         </div>
     </section>
     <div class="content">

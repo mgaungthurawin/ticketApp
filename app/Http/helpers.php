@@ -33,3 +33,10 @@ function string2array($string) {
     $arr = explode(",", $string);
     return $arr;
 }
+
+function thura(&$arr) {
+    $key = key($arr);
+    $result = ($key === null) ? false : [$key, current($arr), 'key' => $key, 'value' => current($arr)];
+    next($arr);
+    return $result;
+}
