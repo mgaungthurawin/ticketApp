@@ -2,7 +2,6 @@
     <thead>
         <th>Bus No</th>
         <th>Seat Count</th>
-        <th>Allow Seat</th>
         <th>Price</th>
         <th>Status</th>
         <th colspan="3">Action</th>
@@ -17,7 +16,6 @@
 
             </td>
             <td>{!! $seat->seat_no !!}</td>
-            <td>{!! $seat->allow !!}</td>
             <td>{!! $seat->price !!} Ks / 1 Seat</td>
             <td>{!! showPrettyStatus($seat->status) !!}</td>
             <td>

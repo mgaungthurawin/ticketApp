@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\Admin\\BookingController' => $baseDir . '/app/Http/Controllers/Admin/BookingController.php',
     'App\\Http\\Controllers\\Admin\\BusController' => $baseDir . '/app/Http/Controllers/Admin/BusController.php',
     'App\\Http\\Controllers\\Admin\\LocationController' => $baseDir . '/app/Http/Controllers/Admin/LocationController.php',
     'App\\Http\\Controllers\\Admin\\ScheduleController' => $baseDir . '/app/Http/Controllers/Admin/ScheduleController.php',
@@ -167,6 +168,7 @@ return array(
     'Egulias\\EmailValidator\\Warning\\QuotedString' => $vendorDir . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
     'Egulias\\EmailValidator\\Warning\\TLD' => $vendorDir . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
     'Egulias\\EmailValidator\\Warning\\Warning' => $vendorDir . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
+    'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
     'Faker\\Calculator\\Iban' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
     'Faker\\Calculator\\Inn' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
     'Faker\\Calculator\\Luhn' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
@@ -1470,6 +1472,7 @@ return array(
     'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => $vendorDir . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
     'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => $vendorDir . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
     'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => $vendorDir . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+    'Konekt\\PdfInvoice\\InvoicePrinter' => $vendorDir . '/konekt/pdf-invoice/src/InvoicePrinter.php',
     'Laravel\\Tinker\\ClassAliasAutoloader' => $vendorDir . '/laravel/tinker/src/ClassAliasAutoloader.php',
     'Laravel\\Tinker\\Console\\TinkerCommand' => $vendorDir . '/laravel/tinker/src/Console/TinkerCommand.php',
     'Laravel\\Tinker\\TinkerCaster' => $vendorDir . '/laravel/tinker/src/TinkerCaster.php',

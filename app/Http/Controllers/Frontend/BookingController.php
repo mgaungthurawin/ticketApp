@@ -7,7 +7,10 @@ use App\Http\Controllers\Controller;
 use Session;
 use App\Models\Customer;
 use App\Models\Booking;
+use App\Models\Seat;
+use App\Models\Bus;
 use Alert;
+use Konekt\PdfInvoice\InvoicePrinter;
 
 class BookingController extends Controller
 {
@@ -43,7 +46,11 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $invoice = new InvoicePrinter('A4', 'Ks', 'en');
+        $orderId = strtotime("now");
+
         $data = $request->all();
+
         $bus_id = Session::get('bus_id');
         $row = Customer::where('email', $data['email'])->first();
         if (empty($row)) {
@@ -56,9 +63,35 @@ class BookingController extends Controller
             $array = explode(",", $seat);
             $book[] = ['customer_id' => $row->id, 'bus_id' => $bus_id, 'seat_no' => $array[0], 'seat_prefix' => $array[1]];
         }
+
+
+        $seat = Seat::where('bus_id', $bus_id)->first();
+        $bus = Bus::find($bus_id)->first();
+        $price = $seat->price;
         Booking::insert($book);
-        Alert::success('Successfully booking', 'Yay');
-        return redirect('/');
+        /* Header settings */
+            $invoice->setLogo(public_path("images/user.png"));
+            $invoice->setColor("#007fff");
+            $invoice->setType("Booking Invoice");    // Invoice Type
+            $invoice->setReference("INV-" . $orderId);   // Reference
+            $invoice->setDate(date('M dS ,Y',time()));   //Billing Date
+            $invoice->setTime(date('h:i:s A',time()));   //Billing Time
+            $invoice->setFrom(array("Aye Aye Nyein","Online Ticket Booking","N0-8, Pyi Thu Kwet(3) Street","Sanchaung"));
+            $invoice->setTo(array($data['name'],$data['email'],$data['address'], $data['phone']));
+            $total = 0;
+            foreach ($book as $key => $b) {
+                $invoice->addItem($b['seat_no'],'Bus No - ' . $bus->no .' Model - ' . $bus->model,1,0,$price,0,1*$price);  
+                $total += $price*1;  
+            }
+            $invoice->addTotal("Total",$total);
+            $invoice->addBadge("Booked");
+            $invoice->addTitle("Important Notice");
+            $invoice->addParagraph("No item will be replaced or refunded if you don't have the invoice with you.");
+            $invoice->setFooternote("<a href='/'>Back</a>");
+            $invoice->render($orderId.'.pdf','I'); 
+
+            Alert::success('Successfully booking', 'Yay');
+            return redirect('/');
     }
 
     /**

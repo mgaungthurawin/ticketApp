@@ -87,6 +87,10 @@ class ComposerStaticInit32c897c7b869e776d88afca1609806bb
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
         ),
+        'K' => 
+        array (
+            'Konekt\\PdfInvoice\\' => 18,
+        ),
         'I' => 
         array (
             'Illuminate\\' => 11,
@@ -247,6 +251,10 @@ class ComposerStaticInit32c897c7b869e776d88afca1609806bb
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Konekt\\PdfInvoice\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/konekt/pdf-invoice/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -343,6 +351,7 @@ class ComposerStaticInit32c897c7b869e776d88afca1609806bb
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Admin\\BookingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BookingController.php',
         'App\\Http\\Controllers\\Admin\\BusController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BusController.php',
         'App\\Http\\Controllers\\Admin\\LocationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LocationController.php',
         'App\\Http\\Controllers\\Admin\\ScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ScheduleController.php',
@@ -502,6 +511,7 @@ class ComposerStaticInit32c897c7b869e776d88afca1609806bb
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
+        'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
         'Faker\\Calculator\\Luhn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
@@ -1805,6 +1815,7 @@ class ComposerStaticInit32c897c7b869e776d88afca1609806bb
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'Konekt\\PdfInvoice\\InvoicePrinter' => __DIR__ . '/..' . '/konekt/pdf-invoice/src/InvoicePrinter.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
