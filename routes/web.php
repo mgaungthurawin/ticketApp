@@ -17,6 +17,7 @@ Route::get('/viewseat/{bus_id}', 'Frontend\TicketController@viewseat');
 Route::post('/bookinginfo', 'Frontend\BookingController@index');
 Route::get('/customerinfo', 'Frontend\BookingController@create');
 Route::post('/customerinfo', 'Frontend\BookingController@store');
+Route::get('/test', 'Frontend\BookingController@test');
 
 
 Route::group(['prefix'=>'admin'],function(){

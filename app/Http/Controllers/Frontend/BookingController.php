@@ -9,6 +9,7 @@ use App\Models\Customer;
 use App\Models\Booking;
 use App\Models\Seat;
 use App\Models\Bus;
+use App\Models\Schedule;
 use Alert;
 use Konekt\PdfInvoice\InvoicePrinter;
 
@@ -52,6 +53,9 @@ class BookingController extends Controller
         $data = $request->all();
 
         $bus_id = Session::get('bus_id');
+        
+        $kill_date = killdate($bus_id);
+
         $row = Customer::where('email', $data['email'])->first();
         if (empty($row)) {
             $row = Customer::create($request->all());    
@@ -61,9 +65,8 @@ class BookingController extends Controller
         $seatArr = Session::get('seatArr');
         foreach ($seatArr as $key => $seat) {
             $array = explode(",", $seat);
-            $book[] = ['customer_id' => $row->id, 'bus_id' => $bus_id, 'seat_no' => $array[0], 'seat_prefix' => $array[1]];
+            $book[] = ['customer_id' => $row->id, 'bus_id' => $bus_id, 'seat_no' => $array[0], 'seat_prefix' => $array[1], 'kill_date' => $kill_date, 'status' => 1];
         }
-
 
         $seat = Seat::where('bus_id', $bus_id)->first();
         $bus = Bus::find($bus_id)->first();
@@ -92,6 +95,10 @@ class BookingController extends Controller
 
             Alert::success('Successfully booking', 'Yay');
             return redirect('/');
+    }
+
+    public function test() {
+        // return Carbon::now()->subDays(-1);
     }
 
     /**

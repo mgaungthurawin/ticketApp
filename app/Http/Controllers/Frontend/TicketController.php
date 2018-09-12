@@ -46,6 +46,7 @@ class TicketController extends Controller
         $books = Booking::join('buses', 'buses.id', 'bookings.bus_id')
                     ->join('seats', 'seats.bus_id', 'buses.id')
                     ->where('bookings.bus_id', $bus_id)
+                    ->where('bookings.status', 1)
                     ->where('seats.status', 1)
                     ->select('bookings.seat_prefix')
                     ->get();
