@@ -89,7 +89,7 @@ class BookingController extends Controller
             $invoice->addTotal("Total",$total);
             $invoice->addBadge("Booked");
             $invoice->addTitle("Important Notice");
-            $invoice->addParagraph("No item will be replaced or refunded if you don't have the invoice with you.");
+            $invoice->addParagraph("This invoice will be killed before one day bus leave.");
             $invoice->setFooternote("<a href='/'>Back</a>");
             $invoice->render($orderId.'.pdf','I'); 
 

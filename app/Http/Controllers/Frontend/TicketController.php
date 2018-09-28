@@ -24,7 +24,6 @@ class TicketController extends Controller
     	$locationArr = [$data['from'], $data['to']];
     	$location = $data['from'] . "," . $data['to'];
     	$data['depature'] = convertDate($data['depature']);
-    	$data['arrival'] = convertDate($data['arrival']);
 
         $directions = Location::wherein('id', $locationArr)->get();
         foreach ($directions as $key => $direction) {

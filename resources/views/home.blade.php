@@ -36,13 +36,6 @@
                                     <input  id="datepicker" name="depature" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
                                 </div>
                             </div>
-                            <div class="to">
-                                <div class="return">
-                                    <h3>Return</h3>
-                                    <input  id="datepicker1" name="arrival" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                </div>
-                                <div class="clear"></div>
-                            </div>
                             <div class="clear"></div>
                             <input type="submit" value="Search Bus">
                         {!! Form::close() !!}                    

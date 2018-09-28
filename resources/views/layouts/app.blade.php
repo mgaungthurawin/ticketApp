@@ -13,6 +13,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     @yield('css')
 </head>
+    <a href="{{ url('admin/login') }}" style="color:#FFFFFF; float:right; padding: 20px;">Login</a>
+    <br/>
     @yield('content')
     <div class="footer-w3l">
         <p class="agileinfo"> &copy; 2016 Flight Ticket Booking . All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
