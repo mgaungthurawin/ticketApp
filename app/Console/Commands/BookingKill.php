@@ -37,7 +37,6 @@ class BookingKill extends Command
      */
     public function handle()
     {
-        // \Log::info('Hello! I am there @ ' . \Carbon\Carbon::now());
         bookingkill();
     }
 }
