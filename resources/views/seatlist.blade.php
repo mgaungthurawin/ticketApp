@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
-    <a href="{{ url('admin/login') }}" style="color:#FFFFFF; float:right; padding: 20px;">Login</a>
+    <a href="{{ url('admin/login') }}" style="color:#FFFFFF; float:right; padding: 20px;">Admin</a>
     <br/>
 <div class="content">
     <h1>Bus Ticket Booking</h1>
